@@ -365,11 +365,7 @@ public class Frame
 		Text F3_exit = new Text("|F3_退出游戏|", 218, 10, Color.YELLOW, 20);
         Text tempText=new Text("并不知道该说些什么--，游戏写的挺烂的，只是为了练习下Java--!", 10, 30, Color.white, 30);
         Text tempText2=new Text("                                      By Sundy (*^__^*) ", 10, 200, Color.white, 30);
-        //加载图片
-		//GameCore.loadBgView("eb1312250030.jpg");
-		
-		
-		
+       
 		int kc=0;
 		while (true) 
 		{
@@ -379,11 +375,15 @@ public class Frame
 				System.exit(0);
 			} else if (kc == KeyEvent.VK_F2)// 让当前所有文字以及精灵消失
 			{
-				// 让当前所有文字以及精灵消失
-
-				Main.whichFrame = 1;// 告诉主函数画出开始画面
-
-				return; // 当前函数结束
+				//让当前文本消失
+                GameCore.hideText(F2_return.getNum());
+                GameCore.hideText(F3_exit.getNum());
+                GameCore.hideText(tempText.getNum());
+                GameCore.hideText(tempText2.getNum());
+                // 告诉主函数画出开始画面      
+				Main.whichFrame = 1;
+				// 当前函数结束
+				return; 
 			}
 		}
 
