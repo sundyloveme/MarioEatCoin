@@ -14,7 +14,6 @@ public class Sprite
 
 	/**
 	 * 构造函数 精灵的名字
-	 * 
 	 * @param spriteName
 	 *            精灵名字
 	 * @param px
@@ -28,7 +27,6 @@ public class Sprite
 		GameCore.createSprite(spriteNum, spriteName);
 		GameCore.setSpritePosition(spriteNum, px, py);
 		this.spriteName = spriteName;
-
 	}
 
 	/**
